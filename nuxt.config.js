@@ -22,10 +22,6 @@ export default {
     ]
   },
 
-  router: {
-    base: '/clock-app/'
-  },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
