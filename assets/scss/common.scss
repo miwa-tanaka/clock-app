@@ -9,14 +9,14 @@ $font-color: #303030;
 }
 
 .bg-noon {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/desktop/bg-image-daytime.jpg) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/desktop/bg-image-daytime.jpg) no-repeat center;
   background-size: cover;
   position: relative;
   min-height: 100vh;
 }
 
 .bg-night {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/desktop/bg-image-nighttime.jpg) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/desktop/bg-image-nighttime.jpg) no-repeat center;
   background-size: cover;
   position: relative;
   min-height: 100vh;
@@ -245,11 +245,11 @@ $font-color: #303030;
 
 @media screen and (max-width: 768px) {
   .bg-noon {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tablet/bg-image-daytime.jpg) no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/tablet/bg-image-daytime.jpg) no-repeat center;
     background-size:cover;
   }
   .bg-night {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tablet/bg-image-nighttime.jpg) no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/tablet/bg-image-nighttime.jpg) no-repeat center;
     background-size: cover;
   }
   .quotes {
@@ -307,11 +307,11 @@ $font-color: #303030;
 
 @media screen and (max-width: 395px) {
   .bg-noon {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/mobile/bg-image-daytime.jpg) no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/mobile/bg-image-daytime.jpg) no-repeat center;
     background-size:cover;
   }
   .bg-night {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/mobile/bg-image-nighttime.jpg) no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(assets/images/mobile/bg-image-nighttime.jpg) no-repeat center;
     background-size:cover;
   }
   .quotes {
