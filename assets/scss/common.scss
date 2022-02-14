@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+$font-color: #303030;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-noon {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/desktop/bg-image-daytime.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+.bg-night {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/desktop/bg-image-nighttime.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+.contents {
+  color: #fff;
+}
+
+.top-enter-active, .top-leave-active {
+  transform: translate(0px, 0px);
+  transition: transform 400ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.top-enter, .top-leave-to {
+  transform: translateY(-100vh) translateY(0px);
+  transition: transform 400ms ease-in-out;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transform: translate(0px, 0px);
+  transition: transform 400ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.slide-enter, .slide-leave-to {
+  transform: translateY(100vh) translateY(0px);
+  transition: transform 400ms cease-in-out;
+}
+
+.quotes {
+  width: 100%;
+  padding-top: 56px;
+  padding-bottom: 111px;
+  display: flex;
+  // top: 56px;
+  &__wrapper  {
+    padding-left: 165px;
+    max-width: 540px;
+    font-size: 18px;
+    line-height: 28px;
+    .txt {
+      font-weight: 400;
+      margin-bottom: 13px;
+    }
+    .author {
+      font-weight: 700;
+    }
+  }
+  &__btn {
+    background: transparent;
+    border: none;
+    margin-left: 16px;
+    margin-top: 4px;
+    width: 16px;
+    height: 16px;
+    svg {
+      fill: #707070;
+    }
+  }
+}
+
+.added {
+  bottom: 56px;
+  transition: all 400ms ease;
+}
+
+.removed {
+  top: 0px;
+  transition: all 400ms ease;
+}
+
+.times {
+  width: 100%;
+  padding-top: 56px;
+  display: flex;
+  position: absolute;
+  &__wrapper {
+    padding-left: 165px;
+    .greeting {
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      svg {
+        vertical-align: middle;
+      }
+    }
+    .time {
+      font-size: 200px;
+      font-weight: 700;
+      letter-spacing: -5px;
+      span {
+        font-size: 40px;
+        font-weight: 300;
+        margin-left: 11px;
+        letter-spacing: 0px;
+      }
+    }
+    .location {
+      font-size: 28px;
+      font-weight: 700;
+      font-weight: bold;
+      letter-spacing: 4.8px;
+      text-transform: uppercase;
+      margin-top: 16px;
+    }
+  }
+  &__btn {
+    background: white;
+    border-radius: 100px;
+    border: 1px solid white;
+    display: flex;
+    padding: 12px 9px 12px 21px;
+    align-items: center;
+    bottom: 0px;
+    right: 100px;
+    position: absolute;
+    &--txt {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      justify-content: center;
+      margin-right: 13px;
+    }
+    &--icon {
+      background: $font-color;
+      border-radius: 100px;
+      padding: 8px 10px;
+      transition: all 400ms ease;
+      &:hover {
+        background: #999999;
+        transition: all 400ms ease;
+      }
+    }
+  }
+}
+
+.details {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  &__first {
+    padding-right: 147px;
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-bottom: 32px;
+  }
+  &__line {
+    width: 4px;
+    background-color: $font-color;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  &__second {
+    padding-left: 92px;
+    padding-top: 5%;
+    padding-bottom: 32px;
+  }
+  &__noon {
+    background: rgba(255, 255, 255, 0.75);
+    color: $font-color;
+  }
+  &__night {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+  }
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+  h2 {
+    font-size: 56px;
+    margin-bottom: 42px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .quotes {
+    padding-top: 4%;
+    padding-bottom: 7%;
+    &__wrapper {
+      padding-left: 14%;
+    }
+  }
+  .times {
+    padding-top: 4%;
+    &__wrapper {
+      padding-left: 14%;
+      .time {
+        font-size: 13vw;
+      }
+    }
+  }
+
+  .details {
+    &__first {
+      padding-right: 10%;
+      padding-bottom: 1%;
+    }
+    &__second {
+      padding-bottom: 1%;
+    }
+    h2 {
+      font-size: 3vw;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .times {
+    display: block;
+    padding-top: 6%;
+    &__btn {
+      position: inherit;
+      margin-top: 7%;
+      margin-left: 14%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bg-noon {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tablet/bg-image-daytime.jpg) no-repeat center;
+    background-size:cover;
+  }
+  .bg-night {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/tablet/bg-image-nighttime.jpg) no-repeat center;
+    background-size: cover;
+  }
+  .quotes {
+    padding-top: 10%;
+    &__wrapper {
+      padding-left: 7%;
+      width: 70%;
+    }
+  }
+  .removed {
+    top: 100px;
+  }
+  .times {
+    &__wrapper {
+      padding-left: 7%;
+      .greeting {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      .time {
+        font-size: 23vw;
+        span {
+          font-size: 32px;
+        }
+      }
+      .location {
+        font-size: 18px;
+        margin-top: 0px;
+      }
+    }
+    &__btn {
+      margin-left: 7%;
+    }
+  }
+  .details {
+    width: 100%;
+    &__first {
+      padding: 11% 5% 9% 5%;
+    }
+    &__line {
+      display: none;
+    }
+    &__second {
+      padding: 11% 5% 9% 5%;
+    }
+    p {
+      font-size: 13px;
+    }
+    h2 {
+      font-size: 6vw;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .bg-noon {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/mobile/bg-image-daytime.jpg) no-repeat center;
+    background-size:cover;
+  }
+  .bg-night {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/mobile/bg-image-nighttime.jpg) no-repeat center;
+    background-size:cover;
+  }
+  .quotes {
+    &__wrapper  {
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+  .removed {
+    top: 0px;
+  }
+  .times {
+    &__wrapper {
+      .greeting {
+        font-size: 15px;
+        line-height: 25px;
+      }
+      .time {
+        letter-spacing: -2.5px;
+        span {
+          font-size: 15px;
+        }
+      }
+      .location {
+        font-size: 15px;
+        margin-top: 16px;
+      }
+    }
+    &__btn {
+      margin-top: 17%;
+    }
+  }
+  .details {
+    display: block;
+    &__first {
+      padding: 12% 7% 0% 7%;
+    }
+    &__second {
+      padding: 0% 7% 7% 7%;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+}
