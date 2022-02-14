@@ -113,7 +113,7 @@
           this.timezone = res.data.time_zone
           this.location = res.data.city + ",  " + res.data.country_code
         })
-        await axios.get("http://worldtimeapi.org/api/timezone/" + this.timezone)
+        await axios.get("https://worldtimeapi.org/api/timezone/" + this.timezone)
           .then((res) => {
             this.abbreviation = res.data.abbreviation
             this.dayOfTheYear = res.data.day_of_year
