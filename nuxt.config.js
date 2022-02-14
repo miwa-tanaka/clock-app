@@ -1,3 +1,6 @@
+require('dotenv').config()
+const { API_KEY } = process.env
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -22,12 +25,9 @@ export default {
     ]
   },
 
-  router: {
-    base: '/clock-app/'
-  },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    { src: '~/assets/scss/common.scss' },
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -43,9 +43,14 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  }
+  ,
+  env: {
+    API_KEY
   }
 }
