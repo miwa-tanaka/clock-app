@@ -43,7 +43,7 @@ $font-color: #303030;
 
 .slide-enter, .slide-leave-to {
   transform: translateY(100vh) translateY(0px);
-  transition: transform 400ms cease-in-out;
+  transition: transform 400ms ease-in-out;
 }
 
 .quotes {
@@ -68,8 +68,7 @@ $font-color: #303030;
   &__btn {
     background: transparent;
     border: none;
-    margin-left: 16px;
-    margin-top: 4px;
+    margin: 4px 4px 4px 16px;
     width: 16px;
     height: 16px;
     svg {
@@ -341,7 +340,7 @@ $font-color: #303030;
       }
     }
     &__btn {
-      margin-top: 17%;
+      margin-top: 15%;
     }
   }
   .details {
