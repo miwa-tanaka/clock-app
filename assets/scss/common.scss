@@ -26,32 +26,17 @@ $font-color: #303030;
   color: #fff;
 }
 
-.top-enter-active, .top-leave-active {
-  transform: translate(0px, 0px);
-  transition: transform 400ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-}
-
-.top-enter, .top-leave-to {
-  transform: translateY(-100vh) translateY(0px);
-  transition: transform 400ms ease-in-out;
-}
-
-.slide-enter-active, .slide-leave-active {
-  transform: translate(0px, 0px);
-  transition: transform 400ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-}
-
-.slide-enter, .slide-leave-to {
-  transform: translateY(100vh) translateY(0px);
-  transition: transform 400ms ease-in-out;
-}
-
 .quotes {
   width: 100%;
   padding-top: 56px;
   padding-bottom: 111px;
   display: flex;
-  // top: 56px;
+  transform: translateY(0);
+  transition: all 700ms ease-in-out;
+  &__expanded {
+    transform: translateY(-260%);
+    transition: all 700ms ease-in-out;
+  }
   &__wrapper  {
     padding-left: 165px;
     max-width: 540px;
@@ -69,22 +54,26 @@ $font-color: #303030;
     background: transparent;
     border: none;
     margin: 4px 4px 4px 16px;
-    width: 16px;
-    height: 16px;
-    svg {
-      fill: #707070;
+    width: 23px;
+    height: 23px;
+    img {
+      width: 23px;
+      height: 23px;
     }
   }
 }
 
-.added {
-  bottom: 56px;
-  transition: all 400ms ease;
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
-.removed {
-  top: 0px;
-  transition: all 400ms ease;
+.rotate {
+  animation: rotation 2s infinite linear;
 }
 
 .times {
@@ -92,6 +81,12 @@ $font-color: #303030;
   padding-top: 56px;
   display: flex;
   position: absolute;
+  bottom: 56px;
+  transition: all 700ms ease-in-out;
+  &__expanded {
+    transform: translateY(-100%);
+    transition: all 700ms ease-in-out;
+  }
   &__wrapper {
     padding-left: 165px;
     .greeting {
@@ -156,10 +151,17 @@ $font-color: #303030;
 }
 
 .details {
+  transition-delay: 300ms;
   bottom: 0;
   position: fixed;
   width: 100%;
   display: flex;
+  transform: translateY(100%);
+  transition: all 700ms ease-in-out;
+  &__expanded {
+    transform: translateY(0%);
+    transition: all 700ms ease-in-out;
+  }
   &__first {
     padding-right: 147px;
     padding-top: 5%;
@@ -232,7 +234,7 @@ $font-color: #303030;
 
 @media screen and (max-width: 960px) {
   .times {
-    display: block;
+    flex-direction: column;
     padding-top: 6%;
     &__btn {
       position: inherit;
@@ -285,6 +287,7 @@ $font-color: #303030;
   }
   .details {
     width: 100%;
+    max-height: 400px;
     &__first {
       padding: 11% 5% 9% 5%;
     }
@@ -323,6 +326,10 @@ $font-color: #303030;
     top: 0px;
   }
   .times {
+    bottom: 40px;
+    &__expanded {
+      bottom: 0px;
+    }
     &__wrapper {
       .greeting {
         font-size: 15px;
@@ -340,16 +347,24 @@ $font-color: #303030;
       }
     }
     &__btn {
-      margin-top: 15%;
+      margin-top: 2rem;
     }
   }
   .details {
     display: block;
     &__first {
       padding: 12% 7% 0% 7%;
+      div {
+        display: flex;
+        justify-content: space-between;
+      }
     }
     &__second {
       padding: 0% 7% 7% 7%;
+      div {
+        display: flex;
+        justify-content: space-between;
+      }
     }
     h2 {
       margin-bottom: 10px;
